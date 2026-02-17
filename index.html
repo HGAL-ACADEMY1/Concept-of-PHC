@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HGAL Academy: Primary Health Care</title>
+    
+    <!-- Google Fonts: Merriweather -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #444; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #666; 
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Merriweather', serif;
+            background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+            color: #e5e5e5;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Scroll Progress Bar */
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 50;
+        }
+        #progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Text Animation Classes */
+        .reveal-text {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal-text.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Chat Bubble / Text Block Styling */
+        .text-block {
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            font-size: 24px; /* Fallback */
+        }
+
+        @media (min-width: 768px) {
+            .text-block {
+                font-size: 26px; /* Requested size */
+            }
+        }
+
+        /* Emphasis Styles */
+        .highlight {
+            color: #60a5fa; /* Light Blue */
+            font-weight: 700;
+        }
+        .highlight-warm {
+            color: #fbbf24; /* Amber */
+            font-weight: 700;
+        }
+        .highlight-alert {
+            color: #f87171; /* Soft Red */
+            font-weight: 700;
+        }
+
+        /* Button Animation */
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+        
+        .vip-btn {
+            animation: pulse-glow 2s infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="max-w-3xl mx-auto px-6 py-12 md:py-20 flex flex-col items-start">
+        
+        <!-- Logo Section -->
+        <div class="w-full flex justify-center mb-16 reveal-text">
+            <!-- Sizing constrained to look big but fit screen width properly. 
+                 Using w-full max-w-xl to ensure visibility without overflow. -->
+            <img src="https://i.imgur.com/eP0BFrd.png" 
+                 alt="HGAL Academy Logo" 
+                 class="w-full max-w-lg object-contain drop-shadow-2xl opacity-90 hover:opacity-100 transition-opacity duration-500">
+        </div>
+
+        <!-- LECTURE START -->
+
+        <div class="text-block reveal-text">
+            👋 Welcome to this lecture! Right now we shall dive into a concept that forms the very foundation of how we stay healthy as a society.
+        </div>
+
+        <div class="text-block reveal-text">
+            It is called <span class="highlight">Primary Health Care</span> (or PHC for short). 🏥
+        </div>
+
+        <div class="text-block reveal-text">
+            Imagine for a moment: if you have a headache or a small cut, you shouldn't have to travel hours to a giant, expensive city hospital, right? You need help that is close by, affordable, and easy to get. That is the heart of what we are learning today.
+        </div>
+
+        <div class="text-block reveal-text">
+            Let's start with the official definition, but I will break it down so it makes perfect sense.
+        </div>
+
+        <div class="text-block reveal-text">
+            <span class="highlight-warm">Primary Health Care</span> is essential care based on practical, scientifically sound, and socially acceptable methods and technology. 🧪✅
+        </div>
+
+        <div class="text-block reveal-text">
+            It must be made **universally accessible** to individuals and families in the community through their full participation. And importantly, it must be at a cost that the community and the country can actually afford to maintain at every stage of their development.
+        </div>
+
+        <div class="text-block reveal-text">
+            Think of it as <span class="highlight">self-reliance</span> and <span class="highlight">self-determination</span>. 🤝
+        </div>
+
+        <div class="text-block reveal-text">
+            PHC forms an integral part of the country’s health system—it is the central function and the main focus! But it is also part of the overall social and economic development of the community.
+        </div>
+
+        <div class="text-block reveal-text">
+            Essentially, it is the <span class="highlight-warm">first level of contact</span> for individuals, the family, and the community with the national health system. It brings health care as close as possible to where people live and work 🏠 and constitutes the first element of a continuing health care process.
+        </div>
+
+        <div class="text-block reveal-text">
+            This definition comes from a very famous meeting: The **Alma Ata 1978 Primary Health Care Conference** (organized by WHO and UNICEF).
+        </div>
+
+        <div class="text-block reveal-text">
+            Okay, let’s now move on to the history behind this. 🕰️
+        </div>
+
+        <div class="text-block reveal-text">
+            <span class="highlight">Historical Perspective of Primary Health Care</span>
+        </div>
+
+        <div class="text-block reveal-text">
+            Let's travel back in time to 1975. 📅
+        </div>
+
+        <div class="text-block reveal-text">
+            Delegates at the **28th World Health Assembly** meeting in Geneva looked at the world's health and realized something scary: the global situation was both <span class="highlight-alert">unhealthy and unjust</span>.
+        </div>
+
+        <div class="text-block reveal-text">
+            They saw numerous examples from all over the world that convinced them that a new approach—Primary Health Care (PHC)—could save people from suffering, pain, disability, and death.
+        </div>
+
+        <div class="text-block reveal-text">
+            They predicted that if the global community had enough political will and commitment, we could prevent a massive burden of unnecessary illness and death borne by millions of people. 🌍
+        </div>
+
+        <div class="text-block reveal-text">
+            This led to a new global revolution in health care, driven by a spirit of <span class="highlight-warm">social justice</span>. Because this was a worldwide problem, they needed a worldwide mobilization of personnel and resources.
+        </div>
+
+        <div class="text-block reveal-text">
+            Two major UN agencies—**WHO** (World Health Organization) and **UNICEF** (United Nations Children’s Fund)—immediately began coordinating the world’s effort to study and implement PHC on a global scale. 🇺🇳
+        </div>
+
+        <div class="text-block reveal-text">
+            Now that we understand how it started, let’s talk about how they prepared for the big launch.
+        </div>
+
+        <div class="text-block reveal-text">
+            Just like when you plan a big party, they held preparatory meetings in many parts of the world. They wanted to gather experiences and refine the principles of PHC.
+        </div>
+
+        <div class="text-block reveal-text">
+            Most of these meetings happened in what were called "developing" or poorer nations in Asia, Africa, and Latin America. However, they also held a meeting for "industrialized" (richer) nations in **New York**. 🗽
+        </div>
+
+        <div class="text-block reveal-text">
+            Why New York? They had to counter the belief that PHC was only for poor countries. No! It is for everyone, rich or poor.
+        </div>
+
+        <div class="text-block reveal-text">
+            A final preparatory meeting was held in **Halifax, Nova Scotia**. Here, non-governmental organizations (NGOs)—from huge international humanitarian groups to small religious groups—reviewed the final draft of the conference document.
+        </div>
+
+        <div class="text-block reveal-text">
+            Finally, in **September 1978**, delegates from 134 nations 🏳️ and many NGOs met in a place called **Alma Ata**, USSR (which is now Almaty, Kazakhstan).
+        </div>
+
+        <div class="text-block reveal-text">
+            It was a historic meeting! The nations of the world committed themselves to achieving <span class="highlight">"Health for All by the year 2000"</span> through Primary Health Care.
+        </div>
+
+        <div class="text-block reveal-text">
+            From the very beginning, this "Health for All" era was based on **social justice and equity**.
+        </div>
+
+        <div class="text-block reveal-text">
+            In Alma Ata, they even updated the definition of "Health". Previously, WHO (in 1975) said health was "a state of complete physical, mental, and social well-being and not merely the absence of disease."
+        </div>
+
+        <div class="text-block reveal-text">
+            But in 1978, they revised it. Health was now defined as: <br>
+            <span class="highlight">"A state of enough physical, mental, social well-being to enable people to work productively and participate actively in the social and economic life of the community in which they live."</span> 💪💼
+        </div>
+
+        <div class="text-block reveal-text">
+            See the difference? It added the ability to be **productive**. This challenges every nation to provide basic health so citizens can lead socially and economically productive lives.
+        </div>
+
+        <div class="text-block reveal-text">
+            Let’s now dive into the specific goals they set.
+        </div>
+
+        <div class="text-block reveal-text">
+            <span class="highlight">3.2 Objectives of Primary Health Care</span> 🎯
+        </div>
+
+        <div class="text-block reveal-text">
+            1️⃣ To make health services accessible and available to everyone, wherever they live or work.
+        </div>
+
+        <div class="text-block reveal-text">
+            2️⃣ To tackle the health problems that cause the highest mortality (death) and morbidity (illness) at a cost the community can afford.
+        </div>
+
+        <div class="text-block reveal-text">
+            3️⃣ To ensure that whatever technology is used is within the ability of the community to use effectively and maintain. (Don't bring a machine no one knows how to fix! 🔧)
+        </div>
+
+        <div class="text-block reveal-text">
+            4️⃣ To ensure that the community is fully involved in planning, delivering, and evaluating the services. This is the spirit of self-reliance.
+        </div>
+
+        <div class="text-block reveal-text">
+            Next, we’ll look at the ingredients that make up PHC.
+        </div>
+
+        <div class="text-block reveal-text">
+            <span class="highlight">Elements of Primary Health Care</span> 🧩
+        </div>
+
+        <div class="text-block reveal-text">
+            At the Alma Ata conference, they identified **eight essential elements**:
+        </div>
+
+        <div class="text-block reveal-text">
+            1. Education concerning prevailing health problems and methods of preventing/controlling them. 📚<br>
+            2. Promotion of food supply and proper nutrition. 🍎<br>
+            3. An adequate supply of safe water and basic sanitation. 🚰<br>
+            4. Maternal and child health care, including family planning. 🤰<br>
+            5. Immunization against major infectious diseases. 💉<br>
+            6. Prevention and control of locally endemic diseases. 🦟<br>
+            7. Appropriate treatment of common diseases and injuries. 🩹<br>
+            8. Provision of essential drugs. 💊
+        </div>
+
+        <div class="text-block reveal-text">
+            At this point, it’s important to consider what PHC actually *looks* like in practice.
+        </div>
+
+        <div class="text-block reveal-text">
+            <span class="highlight">Characteristics of Primary Health Care</span>
+        </div>
+
+        <div class="text-block reveal-text">
+            First, it is **Universally Accessible**. 🌏 This means care must be geographically, financially, and culturally within easy reach of the *whole* community. It must be organized and continuous.
+        </div>
+
+        <div class="text-block reveal-text">
+            Second, it must be **Socially Acceptable**. The care provided must be appropriate and satisfy the health needs of the people in a way that respects their cultural norms.
+        </div>
+
+        <div class="text-block reveal-text">
+            Third, it must be **Affordable**. Whether the community pays or the country pays, the cost shouldn't break the bank. 💸
+        </div>
+
+        <div class="text-block reveal-text">
+            Fourth, it requires **Full Participation**. Individuals, families, and communities must take responsibility for promoting their own health.
+        </div>
+
+        <div class="text-block reveal-text">
+            Fifth, we use **Appropriate Technology**. This means using methods, supplies, and equipment that are locally available and that people can actually use to solve health problems.
+        </div>
+
+        <div class="text-block reveal-text">
+            Sixth, it emphasizes **Self-Reliance and Self-Determination**.
+        </div>
+
+        <div class="text-block reveal-text">
+            Finally, the focus is **Broad**. We consider the community *as a whole* to be the patient, rather than just one individual. The word "Primary" means it is the central concept of the health system. It happens at a transdisciplinary level and permeates all aspects of society.
+        </div>
+
+        <div class="text-block reveal-text">
+            Okay, let's explore the strategy and philosophy behind all this. 🧠
+        </div>
+
+        <div class="text-block reveal-text">
+            PHC is a partnership. Consumers of health care (that's us!) are partners with the professionals (doctors/nurses). We work together for improved health.
+        </div>
+
+        <div class="text-block reveal-text">
+            The strategy encourages **self-care** and **self-management**. People are educated and empowered to use their knowledge and skills to improve health for themselves, their families, and their neighbors.
+        </div>
+
+        <div class="text-block reveal-text">
+            The goal? Individual, family, and community competence! 🏆
+        </div>
+
+        <div class="text-block reveal-text">
+            The key to a PHC program is not the government or the doctors—it is **the people**. They are the major target. You could say the strategy is "by the people, of the people, and for the people."
+        </div>
+
+        <div class="text-block reveal-text">
+            Government officials and health personnel exist to support technologies and facilities that are most beneficial to the population.
+        </div>
+
+        <div class="text-block reveal-text">
+            This requires the development of appropriate health technology that people can afford and use. This includes low-cost, good-quality essential drugs, vaccines, and equipment.
+        </div>
+
+        <div class="text-block reveal-text">
+            It also includes counseling to help people make healthy choices. And of course, it includes efficient facilities like health centers and hospitals. 🏥
+        </div>
+
+        <div class="text-block reveal-text">
+            Now, let's wrap up with the guiding principles.
+        </div>
+
+        <div class="text-block reveal-text">
+            The PHC approach is not just a "blueprint" for action; it contains a philosophy. Here are the **seven key principles**:
+        </div>
+
+        <div class="text-block reveal-text">
+            1️⃣ The right and duty of individuals and communities to become self-reliant and participate fully in their health.
+        </div>
+
+        <div class="text-block reveal-text">
+            2️⃣ Programs must reflect and evolve from the unique socioeconomic and political characteristics of the country. (What works in one country might need changing for another).
+        </div>
+
+        <div class="text-block reveal-text">
+            3️⃣ Programs must address main health problems, integrating preventive, curative, and rehabilitative services, sustained by a referral system.
+        </div>
+
+        <div class="text-block reveal-text">
+            4️⃣ Reliance at all levels on suitably trained health workers who function as a team and respond to the *expressed* needs of the population. 👨‍⚕️👩‍⚕️
+        </div>
+
+        <div class="text-block reveal-text">
+            5️⃣ Programs must be based on relevant research findings and experiences.
+        </div>
+
+        <div class="text-block reveal-text">
+            6️⃣ Government and health professionals have the duty to provide the public with relevant information about health. 📢
+        </div>
+
+        <div class="text-block reveal-text">
+            7️⃣ In addition to the health sector, PHC relates to other sectors (like agriculture, education, housing) and aspects of national development.
+        </div>
+
+        <div class="text-block reveal-text">
+            Finally, let's talk about the "Quality of Life". 🌟
+        </div>
+
+        <div class="text-block reveal-text">
+            PHC services are determined by social goals, like improving the quality of life and getting maximum health benefits for the greatest number of people.
+        </div>
+
+        <div class="text-block reveal-text">
+            Society benefits from healthier people because they are more likely to contribute to social and economic development. Quality of life relates to internal things (how you feel) and external things (social conditions/environment).
+        </div>
+
+        <div class="text-block reveal-text">
+            A high quality of life is evident when community members have the prerequisites for good health and happiness in their daily lives. 😊
+        </div>
+
+        <!-- VIP SECTION CONTINUOUS -->
+        
+        <div class="text-block reveal-text mt-12 mb-20 p-6 border-l-4 border-yellow-500 bg-gray-800 bg-opacity-40 rounded-r-xl">
+            <p class="mb-6 font-bold text-yellow-400">
+                🚀 Join our VIP if you're yet to, for more study materials and other bonuses (worth #115,000).
+            </p>
+            <p class="mb-8">
+                For more details click below
+                <br>
+                👇
+            </p>
+            
+            <a href="https://tinyurl.com/2dbtvx2b" target="_blank" class="vip-btn inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transform transition hover:scale-105 no-underline">
+                Click Here
+            </a>
+        </div>
+
+    </div>
+
+    <script>
+        // Scroll Progress Bar Logic
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+
+        // Text Reveal Animation Logic
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: Stop observing once revealed if you don't want it to fade out again
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            const elements = document.querySelectorAll('.reveal-text');
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+  </html>
